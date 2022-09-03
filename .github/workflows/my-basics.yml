@@ -38,7 +38,7 @@ jobs:
         run: ls -la 
           
   my_deploy:
-    runs-on: ubuntu-latestxzx
+    runs-on: ubuntu-latest
     needs: [my_testing]
     env: 
       VAR: "var1"     
