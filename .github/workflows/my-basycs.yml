@@ -27,6 +27,15 @@ jobs:
           echo "Hellow Message1"
           echo "Hellow Message1"
           echo "Aplication name is ${{ env.APPLICATION_NAME}}"
+          
+      - name: List curent folder
+        run: ls -la
+          
+      - name: Git clone my repo
+        uses: actions/checkout@v1
+        
+      - name: List curent folder
+        run: ls -la
         
           
   my_deploy:
@@ -39,3 +48,6 @@ jobs:
         
       - name: Execute few commands
         run: echo "Deploy package name is ${{ env.PACKAGE_NAME }}"
+        
+      - name: Lets test some packages if they are here
+        run: aws --version
