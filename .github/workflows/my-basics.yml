@@ -38,14 +38,14 @@ jobs:
         run: ls -la 
           
   my_deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latestxzx
     needs: [my_testing]
     env: 
       VAR: "var1"     
     
     steps: 
       - name: Run a one-line script
-        run: echo Hello, world from deploy ${{ env.VAR1 }}! 
+        run: echo Hello, world from deploy ${{ env.VAR }}! 
         
       - name: Execute few commands
         run: echo "Deploy package name is ${{ env.PACKAGE_NAME }}"
